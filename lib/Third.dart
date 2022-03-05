@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:x/Fourth.dart';
 
 class Third extends StatefulWidget {
   @override
@@ -7,6 +8,8 @@ class Third extends StatefulWidget {
 }
 
 class _ThirdState extends State<Third> {
+  String s='';
+  var cont = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -31,8 +34,10 @@ class _ThirdState extends State<Third> {
                     borderRadius: BorderRadius.circular(200),
                     boxShadow: const [
                       BoxShadow(
-                        offset: Offset(0, 3),
-                        blurRadius: 6,
+                        offset: Offset(3, 10),
+                        blurRadius: 7,
+                        spreadRadius: 5,
+                        blurStyle: BlurStyle.normal,
                         color: Color.fromRGBO(151, 167, 195, 0.5),
                       ),
                     ],
@@ -178,18 +183,32 @@ class _ThirdState extends State<Third> {
                 right: 33,
                 top: 262,
                 child: TextFormField(
+                  controller: cont,
+
                   decoration: InputDecoration(
-                    hintText: "\t\t Insert code",
+                  enabled: false,
+
+                    hintText: s==''?"\t\t Insert code":'',
                     hintStyle: const TextStyle(
                       fontSize: 16,
                       color: Color.fromRGBO(98, 124, 168, 1),
                       fontWeight: FontWeight.w600,
                     ),
-                    suffixIcon: GestureDetector(
-                      onTap: () {},
+                    suffixIcon: InkWell(
+                      onTap: () {
+                        print(5);
+                        setState(() {
+                          s='';
+                          cont.text=s;
+                        });
+                      },
                       child: Image.asset(
                         'build/assets/D.png',
                       ),
+                    ),
+                    disabledBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color.fromRGBO(236, 240, 243, 1), width: 2.0),
                     ),
                     border: const OutlineInputBorder(
                       borderSide: BorderSide(
@@ -249,18 +268,18 @@ class _ThirdState extends State<Third> {
                   ),
                 ),
               ),
-              Number(319,105, 310, 246, '1'),
-              Number(319,183, 310, 178, '2'),
-              Number(319,260, 310, 100, '3'),
-              Number(377,105, 252, 256, '4'),
-              Number(377,183, 252, 178, '5'),
-              Number(377,260, 252, 100, '6'),
-              Number(435,105, 194, 256, '7'),
-              Number(435,183, 194, 178, '8'),
-              Number(435,260, 194, 100, '9'),
-              Number(439,105, 136, 256, '*'),
-              Number(439,183, 136, 178, '0'),
-              Number(439,260, 136, 90, '#'),
+              Number(319, 105, 310, 246, '1'),
+              Number(319, 183, 310, 178, '2'),
+              Number(319, 260, 310, 100, '3'),
+              Number(377, 105, 252, 256, '4'),
+              Number(377, 183, 252, 178, '5'),
+              Number(377, 260, 252, 100, '6'),
+              Number(435, 105, 194, 256, '7'),
+              Number(435, 183, 194, 178, '8'),
+              Number(435, 260, 194, 100, '9'),
+              Number(439, 105, 136, 256, '*'),
+              Number(439, 183, 136, 178, '0'),
+              Number(439, 260, 136, 90, '#'),
               Positioned(
                 left: 139,
                 bottom: 80,
@@ -275,42 +294,49 @@ class _ThirdState extends State<Third> {
                       color: Color.fromRGBO(25, 53, 102, 1),
                     ),
                   ),
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ),
               Positioned(
                 left: 121,
-                //top: 593,
                 bottom: 17,
                 right: 120,
-                child: Container(
-                  height: 57,
-                  width: 134,
-                  decoration: BoxDecoration(
-                    color: const Color.fromRGBO(236, 240, 243, 1),
-                    borderRadius: BorderRadius.circular(200),
-                    boxShadow: const [
-                      BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 10,
-                        color: Color.fromRGBO(151, 167, 195, 0.5),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Fourth(),
                       ),
-                      BoxShadow(
-                        offset: Offset(-10, -20),
-                        blurRadius: 10,
-                        color: Color.fromRGBO(252, 252, 252, 1),
-                      ),
-                    ],
-
-                  ),
-                  child: Center(
-                    child: const Text(
-                      'Confirm',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-
-                        color: Color.fromRGBO(25, 53, 102, 1),
+                    );
+                  },
+                  child: Container(
+                    height: 57,
+                    width: 134,
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(236, 240, 243, 1),
+                      borderRadius: BorderRadius.circular(200),
+                      boxShadow: const [
+                        BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 10,
+                          color: Color.fromRGBO(151, 167, 195, 0.5),
+                        ),
+                        BoxShadow(
+                          offset: Offset(-10, -20),
+                          blurRadius: 10,
+                          color: Color.fromRGBO(252, 252, 252, 1),
+                        ),
+                      ],
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Confirm',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromRGBO(25, 53, 102, 1),
+                        ),
                       ),
                     ),
                   ),
@@ -322,15 +348,22 @@ class _ThirdState extends State<Third> {
       ),
     );
   }
-
-  Widget Number(double Top,double Left, double Bottom, double Right, String number) {
+  Widget Number(
+      double Top, double Left, double Bottom, double Right, String number) {
     return Positioned(
       left: Left,
       bottom: Bottom,
       //right: Right,
       //top: Top,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          setState(() {
+          print(number);
+          s+=number.toString();
+          cont.text = s;
+           print(s.toString());
+          });
+        },
         child: Container(
           height: 38,
           width: 39,

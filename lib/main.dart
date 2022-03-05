@@ -116,176 +116,179 @@ class _MyHomePageState extends State<MyHomePage> {
         borderRadius: const BorderRadius.only(
           bottomRight: Radius.circular(230),
         ),
-        child: Drawer(
-          backgroundColor: const Color(0xFFF9F6FB),
-          child: Stack(
-            children: [
-              Positioned(
-                bottom: 632,
-                left: 88,
-                child: ClipOval(
-                  child: Image.asset(
-                    'build/assets/B.jpg',
-                    height: 119,
-                    width: 119,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 111,
-                bottom: 554,
-                //right: 110,
-                top: 234,
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Profile',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Color(0xFF263441),
+        child: Container(
+          width: 310,
+          child: Drawer(
+            backgroundColor: const Color(0xFFF9F6FB),
+            child: Stack(
+              children: [
+                Positioned(
+                  bottom: 632,
+                  left: 88,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'build/assets/B.jpg',
+                      height: 119,
+                      width: 119,
                     ),
                   ),
-                  height: 24,
-                  minWidth: 74,
                 ),
-              ),
-              Positioned(
-                left: 73,
-                bottom: 498,
-                //right: 73,
-                top: 290,
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Privacy policy',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Color(0xFF263441),
+                Positioned(
+                  left: 111,
+                  bottom: 554,
+                  //right: 110,
+                  top: 234,
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Profile',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Color(0xFF263441),
+                      ),
                     ),
+                    height: 24,
+                    minWidth: 74,
                   ),
-                  height: 24,
-                  minWidth: 149,
                 ),
-              ),
-              Positioned(
-                left: 73,
-                bottom: 442,
-                //right: 73,
-                top: 346,
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Terms',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Color(0xFF263441),
+                Positioned(
+                  left: 73,
+                  bottom: 498,
+                  //right: 73,
+                  top: 290,
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Privacy policy',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Color(0xFF263441),
+                      ),
                     ),
+                    height: 24,
+                    minWidth: 149,
                   ),
-                  height: 24,
-                  minWidth: 149,
                 ),
-              ),
-              Positioned(
-                left: 122.06,
-                bottom: 383.08,
-                right: 122.06,
-                top: 383.08,
-                child: FlutterSwitch(
-                  onToggle: (value) {
-                    setState(() {
-                      iss = true;
-                    });
-                  },
-                  value: iss,
-                  padding: 1,
-                  width: 50.89,
-                  height: 29.83,
-                  inactiveColor: Colors.white,
-                  inactiveSwitchBorder: Border.all(
-                    width: 4,
-                    color: const Color(0xFFA35FE9),
+                Positioned(
+                  left: 73,
+                  bottom: 442,
+                  //right: 73,
+                  top: 346,
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Terms',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Color(0xFF263441),
+                      ),
+                    ),
+                    height: 24,
+                    minWidth: 149,
                   ),
-                  toggleColor: const Color(0xFFA35FE9),
-                  activeIcon: const Text(
-                    'A',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Color(
-                        0xFF000000,
+                ),
+                Positioned(
+                  left: 122.06,
+                  bottom: 383.08,
+                  right: 122.06,
+                  top: 383.08,
+                  child: FlutterSwitch(
+                    onToggle: (value) {
+                      setState(() {
+                        iss = true;
+                      });
+                    },
+                    value: iss,
+                    padding: 1,
+                    width: 50.89,
+                    height: 29.83,
+                    inactiveColor: Colors.white,
+                    inactiveSwitchBorder: Border.all(
+                      width: 4,
+                      color: const Color(0xFFA35FE9),
+                    ),
+                    toggleColor: const Color(0xFFA35FE9),
+                    activeIcon: const Text(
+                      'A',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Color(
+                          0xFF000000,
+                        ),
+                      ),
+                    ),
+                    inactiveIcon: const Text(
+                      'E',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Color(
+                          0xFF000000,
+                        ),
                       ),
                     ),
                   ),
-                  inactiveIcon: const Text(
-                    'E',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Color(
-                        0xFF000000,
+                ),
+                Positioned(
+                  left: 73,
+                  bottom: 330,
+                  //right: 73,
+                  top: 458,
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Mode',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Color(0xFF263441),
                       ),
                     ),
+                    height: 24,
+                    minWidth: 149,
                   ),
                 ),
-              ),
-              Positioned(
-                left: 73,
-                bottom: 330,
-                //right: 73,
-                top: 458,
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Mode',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Color(0xFF263441),
+                Positioned(
+                  right: 50,
+                  left: 51,
+                  bottom: 246,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 10,
+                      primary: const Color(0xFFA35FE9),
+                      fixedSize: const Size(194, 52),
+                      shadowColor: const Color(0xFFB378D780),
                     ),
+                    child: const Text(
+                      'Logout',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xFFFFFFFF),
+                          fontSize: 15,
+                          fontFamily: "Adobe Caslon Pro"),
+                    ),
+                    onPressed: () {},
                   ),
-                  height: 24,
-                  minWidth: 149,
                 ),
-              ),
-              Positioned(
-                right: 50,
-                left: 51,
-                bottom: 246,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    elevation: 10,
-                    primary: const Color(0xFFA35FE9),
-                    fixedSize: const Size(194, 52),
-                    shadowColor: const Color(0xFFB378D780),
-                  ),
-                  child: const Text(
-                    'Logout',
+                const Positioned(
+                  right: 79,
+                  left: 7,
+                  bottom: 45,
+                  //height: 62,
+                  child: Text(
+                    'Copyright © 2021 NetFarmy \n\n All right reserved.',
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
-                        color: Color(0xFFFFFFFF),
+                        color: Color(0xFF263441),
                         fontSize: 15,
-                        fontFamily: "Adobe Caslon Pro"),
+                        fontFamily: ""),
                   ),
-                  onPressed: () {},
                 ),
-              ),
-              const Positioned(
-                right: 79,
-                left: 7,
-                bottom: 45,
-                //height: 62,
-                child: Text(
-                  'Copyright © 2021 NetFarmy \n\n All right reserved.',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF263441),
-                      fontSize: 15,
-                      fontFamily: ""),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

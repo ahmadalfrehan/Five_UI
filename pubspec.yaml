@@ -63,6 +63,10 @@ flutter:
     - build/assets/index.png
     - build/assets/B.jpg
     - build/assets/D.png
+    - build/assets/P.png
+    - build/assets/E.png
+    - build/assets/f.png
+    - build/assets/G.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
